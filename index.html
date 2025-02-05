@@ -15,92 +15,85 @@
   <body>
     <!-- Navbar -->
     <header class="navbar-custom">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4">
-        <div class="container">
-          <a class="navbar-brand row" href="#">Logo</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div
-            class="collapse navbar-collapse justify-content-around"
-            id="navbarSupportedContent"
-          >
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-            </ul>
-            <div>
-              <form class="form-inline my-2 my-lg-0">
-                <input
-                  class="form-control mr-sm-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-              </form>
-            </div>
+      <nav
+        class="navbar navbar-dark bg-dark py-2 d-flex justify-content-around"
+      >
+        <div class="input-section container row">
+          <div class="">
+            <a class="navbar-brand col-12 col-lg-4 mb-4 mt-4 mx-4">UKWeather</a>
+            <input
+              class="col-12 col-lg-6 mb-4 mt-4"
+              type="text"
+              id="city"
+              placeholder="Enter city name"
+              required
+            />
+            <button class="col-12 col-lg-2 mb-4 mt-4" id="getWeather">
+              Get Weather
+            </button>
           </div>
         </div>
       </nav>
     </header>
     <!-- Main -->
-    <main>
+    <!-- Section banner -->
     <main class="container mt-5">
-    <div class="weather-dashboard">
-      <h1 class="text-center mt-5">Weather Dashboard</h1>
-      <div class="input-section row">
-        <div class="d-flex justify-content-center">
-        <input class="col-12 col-lg-6 mb-4 mt-4 " type="text" id="city" placeholder="Enter city name" required />
-        <button class="col-12 col-lg-2 mb-4 mt-4" id="getWeather">Get Weather</button>
-      </div>
-      </div>
-      <div id="weatherResult" class="weather-result"></div>
-      <!-- Top Banner Windy.com -->
-      <div class="container">
-        <div class="jumbotron">
-          <div class=""><iframe class="w-100 mh-100" style="height: 450px;"
-            src="https://embed.windy.com/embed2.html?lat=51.507351&lon=-0.127758&detailLat=51.507351&detailLon=-0.127758&zoom=5&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"></iframe></div>  
+      <section class="banner-top">
+        <div class="weather-dashboard">
+          <div id="weatherResult" class="weather-result"></div>
+          <!-- Top Banner Windy.com -->
+          <div class="container">
+            <div class="jumbotron">
+              <div class="">
+                <iframe
+                  class="w-100"
+                  style="height: 450px"
+                  src="https://embed.windy.com/embed2.html?lat=51.507351&lon=-0.127758&detailLat=51.507351&detailLon=-0.127758&zoom=5&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"
+                ></iframe>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-  </main>
-      <!-- Footer -->
-      <footer>
-        
-        <div class="footer-basic fixed-bottom">
-          <ul class="list-inline">
-            <li class="list-inline-item"><a href="#">Home</a></li>
-            <li class="list-inline-item">
-              <a href="html/products.html">Products</a>
-            </li>
-            <li class="list-inline-item">
-              <a href="html/contact.html">Contact</a>
-            </li>
-            <li class="list-inline-item"><a href="html/about.html">About</a></li>
-            <li class="list-inline-item"><a href="html/help.html">Help</a></li>
-          </ul>
-          <p class="copyright">Company Name © 2018</p>
+      </section>
+      <!-- Section weather-cards -->
+      <section class="weather-cards">
+        <!-- Cards weather results-->
+        <div id="weatherResult" class="weather-result container">
+          <div class="row mt-5 mb-5 mx-1 justify-content-between">
+            <div class="card col-md-4 col-12 mb-4 mb-lg-0 border-0">
+              <div class="card-body">
+                Left card
+                <p class="lead text-dark mt-3">City restuls here</p>
+              </div>
+            </div>
+            <div class="card col-md-4 col-12 mb-4 mb-lg-0 border-0">
+              <div class="card-body">
+                Right card
+                <p class="lead text-dark mt-3">Weather restuls here</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </footer>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <!--fixed-bottom ? -->
+      <div class="footer-basic">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Home</a></li>
+          <li class="list-inline-item">
+            <a href="#">Products</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">Contact</a>
+          </li>
+          <li class="list-inline-item"><a href="#">About</a></li>
+          <li class="list-inline-item"><a href="#">Help</a></li>
+        </ul>
+        <p class="copyright">Company Name © 2018</p>
+      </div>
+    </footer>
     <script src="assets/js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
