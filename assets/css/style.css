@@ -54,6 +54,13 @@ button:hover {
   background-color: #0056b3;
 }
 
+button.carousel-control-prev {
+  background-color: transparent !important;
+}
+
+button.carousel-control-next {
+  background-color: transparent !important;
+}
 .weather-result {
   margin-top: 20px;
 }
