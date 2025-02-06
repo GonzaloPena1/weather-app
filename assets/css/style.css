@@ -69,11 +69,11 @@ button.carousel-control-next {
   margin: 10px 0;
 }
 /*Weather  cards*/
-/*
+
 div.card {
   width: 300px !important;
 }
-*/
+
 /* Footer */
 
 .footer-basic {
@@ -142,8 +142,8 @@ div.card {
   color: var(--main-color);
 }
 
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   div.card {
     margin-left: 70px !important;
   }
-} */
+}
