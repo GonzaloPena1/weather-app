@@ -5,7 +5,7 @@ We work as a group to create a weather application that makes tow API calls. One
 [Live website](https://gonzalopena1.github.io/Portfolio-web-page-challenge/)
 
 ## Technologies
-We used HTML, CSS, Javascript, API
+We used HTML, CSS, Javascript, OpenWeather API, Bootstrap
 
 ## Collaborators
 
