@@ -7,6 +7,13 @@ We work as a group to create a weather application that makes tow API calls. One
 ## Technologies
 We used HTML, CSS, Javascript, API
 
+## Collaborators
+
+[@GonzaloPena1](https://github.com/GonzaloPena1)
+
+[@Sp0li](https://github.com/Sp0li)
+
+[@UchechukwuUchendu](https://github.com/UchechukwuUchendu)
 
 ## Project Demo
 
