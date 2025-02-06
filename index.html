@@ -36,25 +36,8 @@
       </nav>
     </header>
     <!-- Main -->
-    <!-- Section banner -->
+
     <main class="container mt-5">
-      <section class="banner-top">
-        <div class="weather-dashboard">
-          <div id="weatherResult" class="weather-result"></div>
-          <!-- Top Banner Windy.com -->
-          <div class="container">
-            <div class="jumbotron">
-              <div class="">
-                <iframe
-                  class="w-100"
-                  style="height: 450px"
-                  src="https://embed.windy.com/embed2.html?lat=51.507351&lon=-0.127758&detailLat=51.507351&detailLon=-0.127758&zoom=5&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <!-- Section weather-cards -->
       <section class="weather-cards">
         <!-- Cards weather results-->
@@ -74,8 +57,27 @@
                 Right card
                 <p class="lead text-dark mt-3">Weather restuls here</p>
                 <p class="lead text-dark mt-3">Temperature:</p>
+                <i class="fa-solid fa-wind"></i>
                 <p class="lead text-dark mt-3">Weather descrition:</p>
                 <p class="lead text-dark mt-3">Weekly forecast:</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="banner-top">
+        <div class="weather-dashboard">
+          <div id="weatherResult" class="weather-result"></div>
+          <!-- Section banner -->
+          <!-- Top Banner Windy.com -->
+          <div class="container">
+            <div class="jumbotron">
+              <div class="">
+                <iframe
+                  class="w-100"
+                  style="height: 450px"
+                  src="https://embed.windy.com/embed2.html?lat=51.507351&lon=-0.127758&detailLat=51.507351&detailLon=-0.127758&zoom=5&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"
+                ></iframe>
               </div>
             </div>
           </div>
