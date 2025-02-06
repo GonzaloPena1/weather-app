@@ -48,22 +48,21 @@ function findCurrentLocation(position)
 function findWeather(lat,lon) {
     let weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
 
-    //let forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;  
+    let forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;  
 
     fetch(weatherURL)
         .then((response) => response.json())
         .then((data) => outputWeather(data))
         .catch((error) => console.error("Fetch error:", error));
 
-    /*fetch(forecastURL)
+    fetch(forecastURL)
         .then((response) => response.json())
         .then((data) => outputForecast(data))
-        .catch((error) => console.error("Fetch error:", error));*/
+        .catch((error) => console.error("Fetch error:", error));
 
 }
 
 function outputWeather(data) {
-    let go = false;
     console.log(data);
 
     document.getElementById("o-city").textContent = `City name: ${data["name"]}`;
@@ -71,14 +70,32 @@ function outputWeather(data) {
     document.getElementById("o-lon").textContent = `Longitude: ${data["coord"]["lon"]}°`;
 
     document.getElementById("o-temp").textContent = `Temperature: ${data["main"]["temp"]}°C`;
-    document.getElementById("o-weatherdesc").textContent = `Weather description ${data["weather"][0]["description"]}`;
+    document.getElementById("o-feelslike").textContent = `Feels like: ${data["main"]["feels_like"]}°C`;
+    document.getElementById("o-humidity").textContent = `Humidity: ${data["main"]["humidity"]}%`;
+
+    //make first letter capital
+    /*let desc = data["weather"][0]["description"].split(" ");
+    for(var item of desc){
+        item[0] = item[0].toUpperCase();
+    }*/
+    document.getElementById("o-weatherdesc").textContent = `Weather description ${data["weather"][0]["description"]}`;//desc.join(" ")
     //document.getElementById("o-").textContent = ``;
 
     //document.getElementById("o-").textContent = ``;
 }
 
 function outputForecast(data) {
+    //console.log(data);
 
-    console.log(data);
+    /*for(var item of data["list"])
+    {
+        if(item["dt_txt"].split(" ")[1].split(":")[0]=="12")
+        {
+            console.log(item["dt_txt"].split(" ")[0]);
+            console.log(data["list"].indexOf(item));
+        }
+        
+    }*/
+    // each day at 12 in the list: 5 13 21 19 37
 
 }
