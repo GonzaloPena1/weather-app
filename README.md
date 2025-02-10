@@ -2,7 +2,7 @@
 
 We work as a group to create a weather application that makes tow API calls. One to get the latitud and the longitud and the other to get the weather.
 
-[Live website](https://gonzalopena1.github.io/Portfolio-web-page-challenge/)
+[Live website](https://gonzalopena1.github.io/weather-app/)
 
 ## Technologies
 We used HTML, CSS, Javascript, OpenWeather API, Bootstrap
