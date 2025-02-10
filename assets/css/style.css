@@ -142,6 +142,12 @@ div.card {
   color: var(--main-color);
 }
 
+div h1,
+h3 {
+  color: var(--main-bg-color) !important;
+  font-weight: bolder !important;
+}
+
 @media only screen and (max-width: 600px) {
   div.card {
     margin-left: 70px !important;
