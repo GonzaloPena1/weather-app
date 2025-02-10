@@ -17,6 +17,6 @@ We used HTML, CSS, Javascript, OpenWeather API, Bootstrap
 
 ## Project Demo
 
-![alt text](desktop.png)
+![alt text](1.png)
 
-![alt text](mobile.png)
+![alt text](2.png)
