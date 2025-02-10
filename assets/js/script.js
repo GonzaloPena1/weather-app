@@ -11,11 +11,8 @@ function setWindyAPI(position)
     document.getElementById("windyAPI").src = `https://embed.windy.com/embed2.html?lat=${lat}&lon=${lon}&detailLat=${lat}&detailLon=${lon}&zoom=5&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1`;
 }
 
-document.getElementById("getWeather").addEventListener("click",getWeather());
-
-function getWeather()
-{
-    //console.clear();
+document.getElementById("getWeather").addEventListener("click",function(e){
+    console.clear();
 
     let city;
     if(document.getElementById("city").value == "")
@@ -29,7 +26,7 @@ function getWeather()
         .then((data) => findLocation(data))
         .catch((error) => console.error("Fetch error:", error));
     }
-}
+})
 
 function findLocation(data) {
 
@@ -63,7 +60,7 @@ function findWeather(lat,lon) {
 }
 
 function outputWeather(data) {
-    console.log(data);
+    //console.log(data);
 
     document.getElementById("o-city").textContent = `City name: ${data["name"]}`;
     document.getElementById("o-lat").textContent = `Latitude: ${data["coord"]["lat"]}°`;
@@ -79,23 +76,28 @@ function outputWeather(data) {
         item[0] = item[0].toUpperCase();
     }*/
     document.getElementById("o-weatherdesc").textContent = `Weather description ${data["weather"][0]["description"]}`;//desc.join(" ")
-    //document.getElementById("o-").textContent = ``;
 
-    //document.getElementById("o-").textContent = ``;
+    document.getElementById("o-windspeed").textContent = `Wind speed: ${data["wind"]["speed"]}m/s`;
 }
 
 function outputForecast(data) {
-    //console.log(data);
+    console.log(data);
 
-    /*for(var item of data["list"])
+    let text = "";
+    let text2 = "";
+    for(var item of data["list"])
     {
         if(item["dt_txt"].split(" ")[1].split(":")[0]=="12")
         {
-            console.log(item["dt_txt"].split(" ")[0]);
-            console.log(data["list"].indexOf(item));
+            text += `${item["main"]["temp"]}°C, `;
+            text2 += `${item["weather"][0]["main"]}, `;
         }
         
-    }*/
+    }
+    //text[text.length()-1]="";
+    //text2[text2.length()-1]="";
     // each day at 12 in the list: 5 13 21 19 37
 
+    document.getElementById("o-wfctemp").textContent = `${text}`;
+    document.getElementById("o-wfcweather").textContent = `${text2}`;
 }
